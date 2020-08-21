@@ -3,7 +3,7 @@ class Scraper
 
   def self.from_imdb
     # парсим страницу
-    page = Nokogiri::HTML(open(ADRESS))
+    page = Nokogiri::HTML(URI.open(ADRESS))
 
     # скрапим названия, режиссеров и года выпуска
     titles =
